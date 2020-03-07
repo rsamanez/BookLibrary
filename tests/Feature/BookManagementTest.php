@@ -73,6 +73,8 @@ class BookManagementTest extends TestCase
             'title' => 'Cool Title',
             'author' => 'Rommel',
         ]);
+        $this->assertCount(1, Book::all());
+        
         $book = Book::first();
 
         $response = $this->delete($book->path());
